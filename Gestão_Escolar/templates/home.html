@@ -1,0 +1,12 @@
+{%  extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <section class="container">
+    <h1>Bem-vindo ao Sistema de Gestão de Alunos</h1>
+    <p>Este sistema permite visualizar, cadastrar e acompanhar alunos.</p>
+
+    <a href="{% url 'alunos:lista' %}" class="btn">Ver Alunos</a>
+    
+    </section>
+{% endblock content %}

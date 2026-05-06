@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Títulos */
+h1, h2 {
+    color: #006400; /* Verde IFRN */
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #a20202;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.btn:hover {
+    background-color: #a20202;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    background-color: #a20202;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-small:hover {
+    background-color: #006400;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th {
+    background-color: #008000;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Formulário */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Card detalhe */
+.card {
+    background: #e9ffe9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* HEADER */
+.header {
+    background-color: #008000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #006400;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}

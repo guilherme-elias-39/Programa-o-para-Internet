@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <section class="container">
+    <h2>Detalhes do Aluno</h2>
+
+    <div class="card">
+        <p><strong>Nome:</strong> João Silva</p>
+        <p><strong>Matrícula:</strong> 2023001</p>
+        <p><strong>Curso:</strong> Informática</p>
+    </div>
+
+    <a href="{% url 'alunos:lista' %}" class="btn">Voltar</a>
+    </section>
+{% endblock content %}
