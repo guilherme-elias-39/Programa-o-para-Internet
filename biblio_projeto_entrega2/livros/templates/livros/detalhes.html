@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+
+Detalhes
+
+{% endblock titulo %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'livros/css/detalhes.css' %}">
+
+{% endblock css %}
+
+
+{% block content %}
+            <div class="content-header">
+                <div class="breadcrumb">
+                    <a href="#">Início</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <a href="#">Lista</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">Detalhes</span>
+                </div>
+            </div>
+
+            <div class="detail-container">
+                <div class="detail-hero">
+                    <div class="detail-hero-content">
+                        <h1 class="detail-title">Título do Item</h1>
+                        <span class="detail-badge">Categoria</span>
+                    </div>
+                    <div class="detail-hero-actions">
+                        <button class="btn btn-secondary">✏️ Editar</button>
+                        <button class="btn btn-danger">🗑️ Excluir</button>
+                    </div>
+                </div>
+
+                <div class="detail-content">
+                    <div class="detail-section">
+                        <h3 class="section-title">
+                            <span class="section-icon">📋</span>
+                            Informações Principais
+                        </h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Campo 1:</span>
+                                <span class="info-value">através da minha janela:</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Campo 2:</span>
+                                <span class="info-value">minha culpa</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Campo 3:</span>
+                                <span class="info-value">é assim que acaba</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Campo 4:</span>
+                                <span class="info-value">Valor 4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="section-title">
+                            <span class="section-icon">📝</span>
+                            Descrição
+                        </h3>
+                        <div class="description-box">
+                            <p>
+                                Esta é uma descrição detalhada do item. Os alunos devem preencher
+                                este conteúdo dinamicamente usando dados passados pela view.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="section-title">
+                            <span class="section-icon">ℹ️</span>
+                            Informações Adicionais
+                        </h3>
+                        <ul class="info-list">
+                            <li>Informação adicional 1</li>
+                            <li>Informação adicional 2</li>
+                            <li>Informação adicional 3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="detail-footer">
+                    <a href="{% url 'livros:lista' %}" class="btn btn-outline">← Voltar para Lista</a>
+                </div>
+            </div>
+{% endblock content %}
