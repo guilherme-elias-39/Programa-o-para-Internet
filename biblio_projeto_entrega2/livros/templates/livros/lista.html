@@ -18,9 +18,9 @@ Lista
                 <div class="breadcrumb">
                     <a href="#">Início</a>
                     <span class="breadcrumb-separator">/</span>
-                    <span class="breadcrumb-current">Lista de Itens</span>
+                    <span class="breadcrumb-current">Lista de filmes</span>
                 </div>
-                <h2 class="page-title">Lista de Itens</h2>
+                <h2 class="page-title">Lista de filmes</h2>
             </div>
 
             <div class="list-controls">
@@ -39,45 +39,69 @@ Lista
                 <div class="item-card">
                     <div class="item-content">
                         <div class="item-header">
-                            <h3 class="item-title">minha culpa</h3>
-                            <span class="item-badge">romance</span>
+                            <h3 class="item-title">Sobrenatural</h3>
+                            <span class="item-badge">horror</span>
                         </div>
-
-                        <div class="item-header">
-                            <h3 class="item-title">através da minha janela</h3>
-                            <span class="item-badge">romance</span>
-                        </div>
-
-                        <div class="item-header">
-                            <h3 class="item-title">é assim que acaba</h3>
-                            <span class="item-badge">romance</span>
-                        </div>
-
                         <p class="item-description">Detalhes do item aqui</p>
                         <div class="item-meta">
-                            <span class="meta-item">📅 07/05/2026</span>
-                            <span class="meta-item">👤 mercedes ron</span>
+                            <span class="meta-item">📅 18/05/2026</span>
+                            <span class="meta-item">👤 Marcos Siega </span>
                         </div>
 
-                        <div class="item-meta">
-                            <span class="meta-item">📅 07/05/2026</span>
-                            <span class="meta-item">👤 clara halle </span>
+                        <div class="item-actions">
+                            <a href="{% url 'livros:detalhes' %}" class="btn-action btn-view" title="Ver detalhes">
+                                <span>👁️</span>
+                            </a>
+                            <a href="#" class="btn-action btn-edit" title="Editar">
+                                <span>✏️</span>
+                            </a>
                         </div>
-
-                        <div class="item-meta">
-                            <span class="meta-item">📅 07/05/2026</span>
-                            <span class="meta-item">👤 caroline </span>
-                        </div>
-
                     </div>
-                    <div class="item-actions">
-                        <a href="{% url 'livros:detalhes' %}" class="btn-action btn-view" title="Ver detalhes">
-                            <span>👁️</span>
-                        </a>
-                        <a href="#" class="btn-action btn-edit" title="Editar">
-                            <span>✏️</span>
-                        </a>
+                </div>
+                <div class="item-card">
+                    <div class="item-content">        
+                        <div class="item-header">
+                            <h3 class="item-title">The vampire Diaries</h3>
+                            <span class="item-badge">fantasia</span>
+                        </div>
+                        <p class="item-description">Detalhes do item aqui</p>
+                        <div class="item-meta">
+                            <span class="meta-item">📅 18/05/2026</span>
+                            <span class="meta-item">👤 Russell Mulcahy </span>
+                        </div>
+
+                        <div class="item-actions">
+                            <a href="{% url 'livros:detalhes' %}" class="btn-action btn-view" title="Ver detalhes">
+                                <span>👁️</span>
+                            </a>
+                            <a href="#" class="btn-action btn-edit" title="Editar">
+                                <span>✏️</span>
+                            </a>
+                        </div>
                     </div>
+                </div>
+                <div class="item-card">
+                    <div class="item-content">            
+                        <div class="item-header">
+                            <h3 class="item-title">Teen wolf</h3>
+                            <span class="item-badge">fantasia</span>
+                        </div>
+                        <p class="item-description">Detalhes do item aqui</p>
+                        <div class="item-meta">
+                            <span class="meta-item">📅 18/05/2026</span>
+                            <span class="meta-item">👤 Robert Singe </span>
+                        </div>
+
+                        <div class="item-actions">
+                            <a href="{% url 'livros:detalhes' %}" class="btn-action btn-view" title="Ver detalhes">
+                                <span>👁️</span>
+                            </a>
+                            <a href="#" class="btn-action btn-edit" title="Editar">
+                                <span>✏️</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Mais itens devem ser gerados dinamicamente com loop -->
