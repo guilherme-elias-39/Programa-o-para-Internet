@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block estilo %}
+<title>Netflix | Lançamentos</title>
+<link rel="stylesheet" href="{% static 'css/lanca.css' %}">
+{% endblock estilo %}
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+{% block content %}
+
+    <!-- Banner (Mantive o seu banner igualzinho) -->
+    <section class="banner">
+        <img src="img/banner-lancamento.jpg">
+        <div class="overlay">
+            <span class="tag">NOVA SÉRIE</span>
+            <h1>STRANGER THINGS</h1>
+            <p>
+                O mundo invertido está de volta. Prepare-se para
+                a temporada mais aguardada do ano.
+            </p>
+            <div class="buttons">
+                <button class="btn-red">Lembrar-me</button>
+                <button class="btn-white">Mais informações</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Em breve (Aqui os cards sumiram e a tabela entrou no lugar) -->
+    <section class="coming">
+
+        <h2>veja mais DETALHES sobre os lançamentos do próximo semestre: </h2>
+
+        <!-- TABELA SIMPLES PARA SUBSTITUIR OS CARDS -->
+        <table border="1" style="width:100%; border-collapse: collapse; text-align: left; margin-top: 20px; color: white; background-color: #111;">
+            <thead>
+                <tr style="background-color: #222; color: red;">
+                    <th style="padding: 10px;">botão</th>
+                    <th style="padding: 10px;">Data</th>
+                    <th style="padding: 10px;">Título</th>
+                    <th style="padding: 10px;">Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- O loop do Django que vai desenhar as linhas com os seus dados -->
+                {% for item in lista %}
+                <tr>
+                    <td style="padding: 10px; text-align: center;">
+                         <a href="{% url 'lista_lancamentos:detalhes' item.id %}" style="background-color: #E50914; color: white; padding: 6px 12px; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 0.9em; display: inline-block;">
+                            Detalhes
+                        </a>
+                    </td>
+
+                    <td style="padding: 10px; color: red; font-weight: bold;">
+                        {{ item.data_lancamento }}
+                    </td>
+                    <td style="padding: 10px; font-weight: bold;">
+                        {{ item.titulo }}
+                    </td>
+                    <td style="padding: 10px;">
+                        {{ item.descrição }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br><br>
+        <!-- Botão simples para o usuário conseguir voltar à tabela geral -->
+        <a href="{% url 'core:home' %}" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px;">
+            Voltar para home
+        </a>
+    </section>
+
+{% endblock content %}

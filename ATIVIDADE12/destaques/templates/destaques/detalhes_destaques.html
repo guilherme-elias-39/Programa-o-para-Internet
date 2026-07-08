@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="coming" style="padding: 40px; color: white;">
+    <!-- O Django vai trocar {{ destaques.titulo }} pelo nome real da série selecionada -->
+    <h1 style="color: red; font-size: 2.5em;">{{ destaques.titulo }}</h1>
+    
+    <p style="font-size: 1.2em; margin-top: 10px;">
+        <strong>Data de Lançamento no Catálogo:</strong> {{ destaques.data_lancamento }}
+    </p>
+    
+    <hr style="border-color: #333; margin: 20px 0;">
+    
+    <h3>Sinopse / Ficha Técnica:</h3>
+    <!-- Mantendo o 'descrição' com o seu acento, conforme está na sua View -->
+    <p style="font-size: 1.1em; line-height: 1.6; color: #ccc;">
+        {{ destaques.descrição }}
+    </p>
+    
+    <br><br>
+    <!-- Botão simples para o usuário conseguir voltar à tabela geral -->
+    <a href="{% url 'destaques:destaques' %}" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px;">
+        Voltar para destaques
+    </a>
+</section>
+{% endblock content %}

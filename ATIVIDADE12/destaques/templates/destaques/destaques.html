@@ -1,0 +1,89 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block estilo %}
+    <title>Destaques do Mês</title>
+    <link rel="stylesheet" href="{% static 'css/destaques.css' %}">
+    {% endblock estilo %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    {% block content %}
+    <!-- BANNER -->
+
+    <section class="banner">
+
+        <div class="banner-info">
+
+            <span class="novo">DESTAQUE DO MÊS</span>
+
+            <h2>THE VAMPIRE DIARIES</h2>
+
+            <p>
+                O retorno à cidade de Mystic Falls traz antigos segredos,
+                novos inimigos e escolhas que mudarão o destino dos irmãos Salvatore.
+            </p>
+
+            <div class="botoes">
+
+                <button class="assistir">
+                    ▶ Assistir
+                </button>
+
+                <button class="info">
+                    Mais informações
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DESTAQUES -->
+
+        <section class="destaques">
+
+            <h2>Destaques do Mês</h2>
+
+                <!-- TABELA SIMPLES PARA SUBSTITUIR OS CARDS -->
+            <table border="1" style="width:100%; border-collapse: collapse; text-align: left; margin-top: 20px; color: white; background-color: #111;">
+                <thead>
+                    <tr style="background-color: #222; color: red;">
+                    <th style="padding: 10px;">botão</th>
+                    <th style="padding: 10px;">Data</th>
+                    <th style="padding: 10px;">Título</th>
+                    <th style="padding: 10px;">Descrição</th>
+                </tr>
+                </thead>
+            <tbody>
+                <!-- O loop do Django que vai desenhar as linhas com os seus dados -->
+                {% for item in lista %}
+                <tr>
+                    <td style="padding: 10px; text-align: center;">
+                         <a href="{% url 'destaques:detalhes_des' item.id%}" style="background-color: #E50914; color: white; padding: 6px 12px; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 0.9em; display: inline-block;">
+                            Detalhes
+                        </a>
+                    </td>
+
+                    <td style="padding: 10px; color: red; font-weight: bold;">
+                        {{ item.data_lancamento }}
+                    </td>
+                    <td style="padding: 10px; font-weight: bold;">
+                        {{ item.titulo }}
+                    </td>
+                    <td style="padding: 10px;">
+                        {{ item.descrição }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+            <br><br>
+            <a href="{% url 'core:home' %}" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px;">
+            Voltar para home
+            </a>
+
+        </section>
+    {% endblock content %}

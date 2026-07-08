@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Roboto, sans-serif;
+    background:#141414;
+    color:white;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:#000;
+
+}
+
+.logo2{
+
+    color:#E50914;
+    font-size:38px;
+    font-weight:900;
+
+}
+
+.navbar ul{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+.navbar a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:#E50914;
+
+}
+
+/* BANNER */
+
+.banner{
+
+    height:65vh;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:80px;
+
+    background:
+    linear-gradient(to right,
+    rgba(0,0,0,.95),
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.2)),
+
+    url("https://images6.alphacoders.com/437/437412.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+.banner-info{
+
+    width: 600px;
+
+}
+
+.novo{
+
+    color:#E50914;
+    font-weight:bold;
+    font-size:24px;
+
+}
+
+.banner h2{
+
+    font-size:50px;
+    margin:10px 0;
+
+}
+
+.banner p{
+
+    font-size:18px;
+    line-height:40px;
+
+}
+
+.botoes{
+
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+
+}
+
+.assistir{
+
+    background:#E50914;
+    color:white;
+    border:none;
+    padding:18px 40px;
+    border-radius:40px;
+    font-size:18px;
+    cursor:pointer;
+
+}
+
+.info{
+
+    background:white;
+    color:black;
+    border:none;
+    padding:18px 40px;
+    border-radius:40px;
+    font-size:18px;
+    cursor:pointer;
+
+}
+
+/* DESTAQUES */
+
+.destaques{
+
+    padding:60px;
+
+}
+
+.destaques h2{
+
+    font-size:40px;
+    margin-bottom:40px;
+
+}
+
+.cards{
+
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    width:250px;
+    background:#222;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:scale(1.05);
+
+}
+
+.card img{
+
+    width:100%;
+    display:block;
+
+}
+
+.card h3{
+
+    padding:15px;
+
+}
+
+.card p{
+
+    padding:0 15px 20px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+    padding:25px;
+    background:#000;
+    margin-top:50px;
+
+}

@@ -1,0 +1,67 @@
+    {% load static %}
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">Netflix<span>.</span></h2>
+
+        <nav class="menu">
+
+            <h5>Menu</h5>
+
+            <a href="{% url 'core:home'  %}" class="active">
+                <i class="fa-solid fa-compass"></i>
+                HOME
+            </a>
+
+            <a href="{% url 'lista_lancamentos:lista' %}">
+                <i class="fa-regular fa-calendar"></i>
+                LISTA de lançamentos
+            </a>
+
+             <a href="{% url 'destaques:destaques' %}">
+                <i class="fa-regular fa-calendar"></i>
+                LISTA destaques do mês
+            </a>
+
+            <h5>Social</h5>
+
+            <a>
+                <i class="fa-regular fa-user"></i>
+                Friends (não utilizável)
+            </a>
+
+            <a>
+                <i class="fa-solid fa-users"></i>
+                Parties (não utilizável)
+            </a>
+
+            <h5>General</h5>
+
+            <a>
+                <i class="fa-solid fa-gear"></i>
+                Settings (não utilizável)
+            </a>
+
+            <a>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Log out (não utilizável)
+            </a>
+
+        </nav>
+
+        <div class="challenge">
+
+            <div class="badge">
+                <i class="fa-solid fa-film"></i>
+            </div>
+
+            <h4>Popcorn Addict</h4>
+
+            <p>4/16 viewing time</p>
+
+            <button>View challenges</button>
+
+        </div>
+
+    </aside>
