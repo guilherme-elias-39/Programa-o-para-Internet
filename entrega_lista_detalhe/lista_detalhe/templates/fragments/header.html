@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+
+<header>
+    <h1>Atividade Avaliativa INFO 4 - IFRN</h1>
+    <nav>
+        <ul>
+        <li><a href="{% url 'core:home' %}">Início</a></li>
+        <li><a href="{% url 'aluno:listaAlunos' %}">Catálogo</a></li>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+
+  <link rel="stylesheet" href="aluno/lista.css">
+
+{% endblock links %}
+
+{% block main %}
+    <h2>Lista de Alunos</h2>
+
+    <table class="tabela-listagem">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Email</th>
+          <th>Detalhes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for aluno in alunos %}
+          <tr>
+            <td><a href="{% url 'aluno:detalhesAluno' aluno.id %}">{{ aluno.nome }}</a></td>
+            <td>{{ aluno.idade }}</td>
+            <td>{{ aluno.email }}</td>
+            <td><a href="{% url 'aluno:detalhesAluno' aluno.id %}">Detalhes</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock main %}

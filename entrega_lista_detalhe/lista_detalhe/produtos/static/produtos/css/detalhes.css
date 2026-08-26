@@ -1,0 +1,60 @@
+/* ===== Página de detalhes ===== */
+:root {
+    --verde: #f5f5f5;
+    --verde-escuro: #14532D;
+    --vermelho: #D62839;
+    --branco: #FFFFFF;
+    --texto: #222222;
+  }  
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.cartao-detalhes {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--branco);
+    color: var(--texto);
+    border-radius: 6px;
+    padding: 24px 28px;
+    text-align: left;
+  }
+   
+  .voltar {
+    display: inline-block;
+    color: var(--vermelho);
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 18px;
+  }
+   
+  .voltar:hover {
+    text-decoration: underline;
+  }
+   
+  .lista-detalhes {
+    list-style: none;
+  }
+   
+  .lista-detalhes li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+  }
+   
+  .lista-detalhes li:last-child {
+    border-bottom: none;
+  }
+   
+  .rotulo {
+    font-weight: bold;
+    color: var(--verde-escuro);
+  }
+   
+  .valor {
+    color: var(--texto);
+  }
+  
+  

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block links %}
+    {% endblock links %}
+</head>
+<body>
+
+    {% include "fragments/header.html" %}
+
+  <main>
+    {% block main %}{% endblock main %}
+  </main>
+
+  {% include "fragments/footer.html" %}
+
+</body>
+</html>

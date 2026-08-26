@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+
+  <link rel="stylesheet" href="aluno/detalhes.css">
+
+{% endblock links %}
+
+{% block main %}
+    <h2>Detalhes do Aluno</h2>
+
+    <div class="cartao-detalhes">
+      <a href="{% url 'aluno:listaAlunos' %}" class="voltar">&larr; Voltar ao catálogo</a>
+
+      <ul class="lista-detalhes">
+        <li>
+          <span class="rotulo">Nome:</span>
+          <span class="valor">{{ aluno.nome }}</span>
+        </li>
+        <li>
+          <span class="rotulo">Idade:</span>
+          <span class="valor">{{ aluno.idade }}</span>
+        </li>
+        <li>
+          <span class="rotulo">Email:</span>
+          <span class="valor">{{ aluno.email }}</span>
+        </li>
+      </ul>
+    </div>
+{% endblock main %}

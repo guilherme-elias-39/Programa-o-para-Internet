@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+
+    <link rel="stylesheet" href="core/home.css">
+
+{% endblock links %}
+
+{% block main %}
+
+    <h2>Bem-vindo(a)!</h2>
+    <p>Estamos felizes em ter você aqui. Navegue pelo menu para conhecer nosso catálogo.</p>
+    <a href="{% url 'aluno:listaAlunos' %}" class="botao">Ver catálogo</a>
+
+{% endblock main %}
