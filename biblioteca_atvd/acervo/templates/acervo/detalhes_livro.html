@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Detalhes do Livro
+{% endblock %}
+
+{% block content %}
+
+<div class="detail-container">
+
+    <div class="detail-header">
+
+        <h1>Detalhes do Livro</h1>
+
+        <a href="{% url 'lista livros' %}" class="btn-back">
+            ← Voltar para lista
+        </a>
+
+    </div>
+
+    <div class="detail-card">
+
+        <div class="card-header">
+            <h2>{{ livro.titulo }}</h2>
+        </div>
+
+        <div class="card-body">
+
+            <table class="detail-table">
+
+                <tr>
+                    <th>Data de lançamento</th>
+                    <td>{{ livro.data_lancamento }}</td>
+                </tr>
+
+                <tr>
+                    <th>Editora</th>
+                    <td>{{ livro.editora }}</td>
+                </tr>
+
+                <tr>
+                    <th>Resumo</th>
+                    <td>{{ livro.resumo }}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

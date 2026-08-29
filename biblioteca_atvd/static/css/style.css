@@ -1,0 +1,221 @@
+/* Estilos gerais */
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Barra de navegação */
+
+.navbar {
+    background-color: #34495e;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: #2c3e50;
+}
+
+.titulo-home {
+    text-align: center;
+}
+.subtitulo-home {
+    text-align: center;
+}
+
+/* Conteúdo principal */
+
+main {
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* Listas */
+
+.list-container {
+    width: 100%;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-header h1 {
+    margin: 0;
+}
+
+/* Tabela */
+
+.list-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #34495e;
+    color: white;
+}
+
+.data-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Botões */
+
+.btn-home,
+.btn-detail,
+.btn-back {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-home {
+    background-color: #34495e;
+    color: white;
+}
+
+.btn-home:hover {
+    background-color: #2c3e50;
+}
+
+.btn-detail {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-detail:hover {
+    background-color: #2980b9;
+}
+
+.btn-back {
+    background-color: #34495e;
+    color: white;
+}
+
+.btn-back:hover {
+    background-color: #2c3e50;
+}
+
+/* Detalhes */
+
+.detail-container {
+    width: 100%;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.detail-header h1 {
+    margin: 0;
+}
+
+.detail-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card-header {
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    margin: 0;
+}
+
+/* Tabela de detalhes */
+
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-table th,
+.detail-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.detail-table th {
+    width: 25%;
+    background-color: #f0f0f0;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
