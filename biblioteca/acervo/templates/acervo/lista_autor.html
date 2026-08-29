@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Autores
+{% endblock %}
+
+{% block content %}
+
+<div class="list-container">
+
+    <div class="list-header">
+        <h1>Lista de Autores</h1>
+
+        <a href="{% url 'core:home' %}" class="btn-home">
+            ← Voltar para página principal
+        </a>
+    </div>
+
+    <div class="list-card">
+
+        {% if autores %}
+
+            <table class="data-table">
+
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Ano de nascimento</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for autor in autores %}
+
+                        <tr>
+                            <td>{{ autor.nome }}</td>
+                            <td>{{ autor.email }}</td>
+                            <td>{{ autor.nascimento }}</td>
+
+                            <td>
+                                <a href="{% url 'detalhes_autor' autor.id %}" class="btn-detail">
+                                    Ver detalhes
+                                </a>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        {% else %}
+
+            <p>Nenhum autor cadastrado.</p>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}

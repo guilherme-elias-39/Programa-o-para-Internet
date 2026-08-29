@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Detalhes do Autor
+{% endblock %}
+
+{% block content %}
+
+<div class="detail-container">
+
+    <div class="detail-header">
+
+        <h1>Detalhes do Autor</h1>
+
+        <a href="{% url 'lista_autor' %}" class="btn-back">
+            ← Voltar para lista
+        </a>
+
+    </div>
+
+    <div class="detail-card">
+
+        <div class="card-header">
+            <h2>{{ autor.nome }}</h2>
+        </div>
+
+        <div class="card-body">
+
+            <table class="detail-table">
+
+                <tr>
+                    <th>E-mail</th>
+                    <td>
+                        <a href="mailto:{{ autor.email }}">
+                            {{ autor.email }}
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Ano de nascimento</th>
+                    <td>{{ autor.nascimento }}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
