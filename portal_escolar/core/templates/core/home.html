@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Início | Portal de Notícias
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-conteudo">
+
+        <span class="hero-tag">INFORMAÇÃO</span>
+
+        <h1>
+            Bem-vindo ao Portal de Notícias
+        </h1>
+
+        <p>
+            Acompanhe notícias, categorias e etiquetas
+            em um só lugar.
+        </p>
+
+        <div class="hero-botoes">
+
+            <a href="{% url 'lista_noticias' %}" class="botao-principal">
+                Ver notícias
+            </a>
+
+            <a href="{% url 'lista_categorias' %}" class="botao-secundario">
+                Explorar categorias
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="secao">
+
+    <div class="titulo-secao">
+
+        <span>PORTAL</span>
+
+        <h2>
+            Explore nosso conteúdo
+        </h2>
+
+        <p>
+            Navegue pelas notícias, categorias e etiquetas disponíveis.
+        </p>
+
+    </div>
+
+    <div class="cards-informacao">
+
+        <div class="card-info">
+            <div class="icone">📰</div>
+
+            <h3>Notícias</h3>
+
+            <p>
+                Confira todas as notícias cadastradas no portal.
+            </p>
+
+            <a href="{% url 'lista_noticias' %}">
+                Acessar notícias →
+            </a>
+        </div>
+
+
+        <div class="card-info">
+            <div class="icone">📂</div>
+
+            <h3>Categorias</h3>
+
+            <p>
+                Encontre notícias organizadas por categoria.
+            </p>
+
+            <a href="{% url 'lista_categorias' %}">
+                Ver categorias →
+            </a>
+        </div>
+
+
+        <div class="card-info">
+            <div class="icone">🏷️</div>
+
+            <h3>Etiquetas</h3>
+
+            <p>
+                Explore as etiquetas utilizadas nas notícias.
+            </p>
+
+            <a href="{% url 'lista_tags' %}">
+                Ver etiquetas →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

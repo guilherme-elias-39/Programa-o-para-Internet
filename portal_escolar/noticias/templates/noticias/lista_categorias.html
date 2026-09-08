@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Categorias | Portal de Notícias
+{% endblock %}
+
+{% block content %}
+
+<section class="pagina">
+
+    <div class="titulo-pagina">
+
+        <span>ORGANIZAÇÃO</span>
+
+        <h1>Categorias</h1>
+
+        <p>
+            Confira as categorias presentes no portal.
+        </p>
+
+    </div>
+
+
+    <div class="grid-categorias">
+
+        {% for categoria in categorias %}
+
+            <div class="card-categoria">
+
+                <div class="categoria-icone">
+                    📂
+                </div>
+
+                <h2>
+                    {{ categoria.nome }}
+                </h2>
+
+                <p>
+                    Notícias relacionadas a esta categoria.
+                </p>
+
+            </div>
+
+        {% empty %}
+
+            <div class="mensagem-vazia">
+
+                <h2>Nenhuma categoria encontrada</h2>
+
+                <p>
+                    Ainda não existem categorias cadastradas.
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="subtitulo">
+
+        <h2>Notícias cadastradas</h2>
+
+    </div>
+
+
+    <div class="lista-simples">
+
+        {% for noticia in noticias %}
+
+            <a
+                href="{% url 'detalhes_noticia' noticia.id %}"
+                class="item-lista"
+            >
+
+                <div>
+
+                    <span>
+                        {{ noticia.categoria.nome }}
+                    </span>
+
+                    <h3>
+                        {{ noticia.manchete }}
+                    </h3>
+
+                </div>
+
+                <strong>→</strong>
+
+            </a>
+
+        {% empty %}
+
+            <p>Nenhuma notícia cadastrada.</p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

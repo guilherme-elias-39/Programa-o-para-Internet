@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ noticia.manchete }} | Portal de Notícias
+{% endblock %}
+
+{% block content %}
+
+<section class="pagina">
+
+    <article class="noticia-detalhe">
+
+        <a href="{% url 'lista_noticias' %}" class="voltar">
+            ← Voltar para notícias
+        </a>
+
+
+        <div class="noticia-cabecalho">
+
+            <span class="categoria">
+                {{ noticia.categoria.nome }}
+            </span>
+
+            <h1>
+                {{ noticia.manchete }}
+            </h1>
+
+        </div>
+
+
+        <div class="noticia-texto">
+
+            <p>
+                {{ noticia.detalhamento }}
+            </p>
+
+        </div>
+
+
+        <div class="noticia-tags">
+
+            <h3>Etiquetas</h3>
+
+            <div class="tags">
+
+                {% for tag in noticia.tags.all %}
+
+                    <span class="tag">
+                        #{{ tag.titulo }}
+                    </span>
+
+                {% empty %}
+
+                    <span class="sem-tags">
+                        Nenhuma etiqueta associada.
+                    </span>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+{% endblock %}
