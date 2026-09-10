@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ projeto.titulo }} | ProjetoIF{% endblock %}
+
+{% block content %}
+
+    <div class="detalhe-projeto">
+
+        <span class="categoria">
+            {{ projeto.categoria.nome }}
+        </span>
+
+        <h1>
+            {{ projeto.titulo }}
+        </h1>
+
+
+        <div class="informacao">
+
+            <h2>Descrição</h2>
+
+            <p>
+                {{ projeto.descricao }}
+            </p>
+
+        </div>
+
+
+        <div class="informacao">
+
+            <h2>Categoria</h2>
+
+            <p>
+                {{ projeto.categoria.nome }}
+            </p>
+
+        </div>
+
+
+        <div class="informacao">
+
+            <h2>Data de início</h2>
+
+            <p>
+                {{ projeto.data_inicio|date:"d/m/Y" }}
+            </p>
+
+        </div>
+
+
+        <div class="informacao">
+
+            <h2>Equipe</h2>
+
+            <ul class="equipe">
+
+                {% for aluno in projeto.equipe.all %}
+
+                    <li>
+                        {{ aluno.nome }}
+                    </li>
+
+                {% empty %}
+
+                    <li>
+                        Nenhum aluno cadastrado na equipe.
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+
+        <div class="acoes-projeto">
+
+            <a href="{% url 'lista_projetos' %}" class="botao">
+                ← Voltar para projetos
+            </a>
+
+            <a href="{% url 'home' %}" class="botao botao-secundario">
+                Ir para início
+            </a>
+
+        </div>
+
+    </div>
+
+{% endblock %}

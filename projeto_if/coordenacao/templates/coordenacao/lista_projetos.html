@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Projetos de Extensão | ProjetoIF{% endblock %}
+
+{% block content %}
+
+    <h1 class="titulo-pagina">
+        Projetos de Extensão
+    </h1>
+
+    <p class="subtitulo">
+        Conheça os projetos de extensão cadastrados no ProjetoIF.
+    </p>
+
+    {% if projetos %}
+
+        <div class="lista-projetos">
+
+            {% for projeto in projetos %}
+
+                <article class="card-projeto">
+
+                    <span class="categoria">
+                        {{ projeto.categoria.nome }}
+                    </span>
+
+                    <h2>
+                        {{ projeto.titulo }}
+                    </h2>
+
+                    <a
+                        href="{% url 'detalhe_projeto' projeto.id %}"
+                        class="botao"
+                    >
+                        Ver detalhes
+                    </a>
+
+                </article>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <p class="mensagem-vazia">
+            Nenhum projeto cadastrado.
+        </p>
+
+    {% endif %}
+
+{% endblock %}

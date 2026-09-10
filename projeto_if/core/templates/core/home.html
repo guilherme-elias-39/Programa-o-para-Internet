@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Início | ProjetoIF{% endblock %}
+
+{% block content %}
+
+    <section class="home">
+
+        <div class="home-conteudo">
+
+            <span class="home-destaque">
+                Projetos de Extensão
+            </span>
+
+            <h1>
+                Bem-vindo ao ProjetoIF
+            </h1>
+
+            <p>
+                Conheça os projetos de extensão desenvolvidos no IFRN,
+                suas categorias e os alunos que fazem parte de cada equipe.
+            </p>
+
+            <div class="home-botoes">
+
+                <a href="{% url 'lista_projetos' %}" class="botao botao-home">
+                    Ver projetos
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="home-informacoes">
+
+        <div class="card-informacao">
+
+            <h2>Projetos</h2>
+
+            <p>
+                Consulte os projetos de extensão cadastrados no sistema.
+            </p>
+
+        </div>
+
+        <div class="card-informacao">
+
+            <h2>Categorias</h2>
+
+            <p>
+                Veja a categoria relacionada a cada projeto desenvolvido.
+            </p>
+
+        </div>
+
+        <div class="card-informacao">
+
+            <h2>Equipes</h2>
+
+            <p>
+                Conheça os alunos participantes das equipes dos projetos.
+            </p>
+
+        </div>
+
+    </section>
+
+{% endblock %}
