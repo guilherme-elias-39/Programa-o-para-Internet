@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Etiquetas | Portal de Notícias
+{% endblock %}
+
+{% block content %}
+
+<section class="pagina">
+
+    <div class="titulo-pagina">
+
+        <span>CLASSIFICAÇÃO</span>
+
+        <h1>Etiquetas</h1>
+
+        <p>
+            Confira as etiquetas utilizadas nas notícias.
+        </p>
+
+    </div>
+
+
+    <div class="grid-tags">
+
+        {% for tag in tags %}
+
+            <div class="card-tag">
+
+                <span class="tag-grande">
+                    #
+                </span>
+
+                <h2>
+                    {{ tag.titulo }}
+                </h2>
+
+            </div>
+
+        {% empty %}
+
+            <div class="mensagem-vazia">
+
+                <h2>Nenhuma etiqueta encontrada</h2>
+
+                <p>
+                    Ainda não existem etiquetas cadastradas.
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="subtitulo">
+
+        <h2>Notícias cadastradas</h2>
+
+    </div>
+
+
+    <div class="lista-simples">
+
+        {% for noticia in noticias %}
+
+            <a
+                href="{% url 'detalhes_noticia' noticia.id %}"
+                class="item-lista"
+            >
+
+                <div>
+
+                    <span>
+                        {{ noticia.categoria.nome }}
+                    </span>
+
+                    <h3>
+                        {{ noticia.manchete }}
+                    </h3>
+
+                </div>
+
+                <strong>→</strong>
+
+            </a>
+
+        {% empty %}
+
+            <p>Nenhuma notícia cadastrada.</p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

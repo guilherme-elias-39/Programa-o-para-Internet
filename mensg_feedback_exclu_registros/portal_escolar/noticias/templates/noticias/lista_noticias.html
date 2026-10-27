@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Notícias | Portal de Notícias
+{% endblock %}
+
+{% block content %}
+
+<section class="pagina">
+
+    <div class="titulo-pagina">
+
+        <span>INFORMAÇÃO</span>
+
+        <h1>Últimas notícias</h1>
+
+        <p>
+            Confira as notícias cadastradas no portal.
+        </p>
+
+    </div>
+
+
+    {% if noticias %}
+
+        <div class="grid-noticias">
+
+            {% for noticia in noticias %}
+
+                <article class="card-noticia">
+
+                    <div class="card-noticia-conteudo">
+
+                        <span class="categoria">
+                            {{ noticia.categoria.nome }}
+                        </span>
+
+                        <h2>
+                            {{ noticia.manchete }}
+                        </h2>
+
+                        <p>
+                            {{ noticia.detalhamento|truncatewords:25 }}
+                        </p>
+
+                        <div class="card-rodape">
+
+                            <a
+                                href="{% url 'detalhes_noticia' noticia.id %}"
+                                class="botao-leia"
+                            >
+                                Ler notícia →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <div class="mensagem-vazia">
+
+            <h2>Nenhuma notícia encontrada</h2>
+
+            <p>
+                Ainda não existem notícias cadastradas.
+            </p>
+
+        </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

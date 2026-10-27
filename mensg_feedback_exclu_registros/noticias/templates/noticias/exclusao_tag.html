@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Excluir tag | Portal de Notícias{% endblock %}
+
+{% block content %}
+<section class="pagina">
+    <div class="titulo-pagina">
+        <h1>Confirmar exclusão</h1>
+        <p>Tem certeza de que deseja excluir a tag"{{ tag.titulo }}"?</p>
+    </div>
+
+    
+<form method="post" class="formulario-acoes">
+    {% csrf_token %}
+
+    <button type="submit" class="botao-principal">Confirmar exclusão</button>
+
+    <a href="{% url 'lista_tags' %}" class="botao-cancelar">Cancelar</a>
+</form>
+
+</section>
+{% endblock %}

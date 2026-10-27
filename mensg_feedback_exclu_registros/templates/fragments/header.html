@@ -1,0 +1,31 @@
+<header class="cabecalho">
+
+    <div class="container cabecalho-conteudo">
+
+        <a href="{% url 'home' %}" class="logo">
+            NOTÍCIAS
+        </a>
+
+        <nav class="navegacao">
+
+            <a href="{% url 'home' %}" class="botao-nav">
+                Início
+            </a>
+
+            <a href="{% url 'lista_noticias' %}" class="botao-nav">
+                Notícias
+            </a>
+
+            <a href="{% url 'lista_categorias' %}" class="botao-nav">
+                Categorias
+            </a>
+
+            <a href="{% url 'lista_tags' %}" class="botao-nav">
+                Etiquetas
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
